@@ -1,4 +1,4 @@
-FROM nikeda/tabular_analytics:0.0.11
+FROM nikeda/tabular_analytics:0.0.12
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
 RUN echo "now building..."
 RUN pip install optuna
