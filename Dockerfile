@@ -1,4 +1,4 @@
-FROM nikeda/tabular_analytics:0.0.13
+FROM nikeda/tabular_analytics:latest
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
 RUN echo "now building..."
 RUN R -e "install.packages('V8',dependencies=TRUE, repos='http://cran.rstudio.com/')"
