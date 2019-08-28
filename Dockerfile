@@ -2,6 +2,7 @@ FROM nikeda/tabular_analytics:0.0.11
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
 RUN echo "now building..."
 RUN pip install optuna
+
 RUN R -e "install.packages('V8',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('huge',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('Matrix',dependencies=TRUE, repos='http://cran.rstudio.com/')"
