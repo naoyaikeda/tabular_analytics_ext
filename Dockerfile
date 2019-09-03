@@ -1,7 +1,7 @@
 FROM nikeda/tabular_analytics:latest
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
 RUN echo "now building..."
-RUN apt install -y lsb-release build-essential libssl-dev libc6-dev
+RUN apt install -y lsb-release build-essential libssl-dev libc6-dev libicu-dev apt-file
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 RUN wget https://github.com/unicode-org/icu/archive/release-58-3.tar.gz && \
     tar xvzf release-58-3.tar.gz && \
