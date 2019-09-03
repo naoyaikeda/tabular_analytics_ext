@@ -13,6 +13,7 @@ RUN R -e "install.packages('KFAS',dependencies=TRUE, repos='http://cran.rstudio.
 RUN R -e "install.packages('bsts',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 RUN R -e "install.packages('BNSL',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 RUN R -e "install.packages('pcalg',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('shinystan', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN curl -L  "https://oscdl.ipa.go.jp/IPAexfont/ipaexg00301.zip" > font.zip
 RUN unzip font.zip
 RUN cp ipaexg00301/ipaexg.ttf /opt/conda/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/ipaexg.ttf
