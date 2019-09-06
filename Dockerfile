@@ -15,3 +15,11 @@ RUN R -e "install.packages('bsts',dependencies=TRUE, repos='http://cran.rstudio.
 RUN R -e "install.packages('BNSL',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 RUN R -e "install.packages('pcalg',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
+RUN ln -s /usr/include/locale.h /usr/include/xlocale.h && \
+    wget https://github.com/unicode-org/icu/archive/release-58-3.tar.gz && \
+    tar xvzf release-58-3.tar.gz && \
+    cd icu-release-58-3/icu4c/source && \
+    ./configure && \
+    make && \
+    make install && \
+    ldconfig /etc/ld.so.conf.d

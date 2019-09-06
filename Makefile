@@ -1,6 +1,6 @@
 USER=nikeda
 NAME=tabular_analytics_ext
-VERSION=0.1.1
+VERSION=0.1.2
 
 build:
 	docker build -t $(USER)/$(NAME):$(VERSION) .
