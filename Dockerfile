@@ -14,6 +14,7 @@ RUN R -e "install.packages('KFAS',dependencies=TRUE, repos='http://cran.rstudio.
 RUN R -e "install.packages('bsts',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 RUN R -e "install.packages('BNSL',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
 RUN R -e "install.packages('pcalg',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('CausalImpact',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h && \
     wget https://github.com/unicode-org/icu/archive/release-58-3.tar.gz && \

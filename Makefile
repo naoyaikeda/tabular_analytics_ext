@@ -1,6 +1,6 @@
 USER=nikeda
 NAME=tabular_analytics_ext
-VERSION=0.1.2
+VERSION=0.1.3
 
 build:
 	docker build -t $(USER)/$(NAME):$(VERSION) .
@@ -14,6 +14,7 @@ start:
 		-v $$PWD/jovyan:/home/jovyan \
 		--name $(NAME) \
 		$(USER)/$(NAME):$(VERSION)
+
 start-allow-root:
 	docker run -itd --rm \
 		-p 10000:8888 \
